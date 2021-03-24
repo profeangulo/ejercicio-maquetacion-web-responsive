@@ -1,0 +1,84 @@
+/* Patrones Globales */
+
+/* Eliminar margen por defecto del BODY */
+body { margin: 0; }
+
+/* Tipografía Única: Quicksand */
+h1, h2, h3, h4, h5, h6, p, a, span, form, input, select, textarea, option, button, div { font-family: 'Quicksand', sans-serif; }
+
+/* Propiedad display: block; a todas las cajas de estructura para que se comporten como cajas */
+header, main, section, footer, aside, article, figure, figcaption, nav, div { display: block; }
+
+/* Quitar margen que traen por defecto los títulos, subtítulos y párrafos */
+h1, h2, h3, h4, h5, h6, p, figure { margin: 0; }
+
+
+
+/* Estilo Propio */
+
+/* Caja Main */
+main { width: 100%; height: auto; margin: 0 auto; float: none; position: relative; }
+
+
+
+/* Sección 01 */
+main section#seccion-01 { width: 100%; height: 500px; margin: 0 auto; float: none; position: relative; }
+main section#seccion-01 article.ancho-50 { width: 50%; height: 500px; margin: 0; float: left; position: relative; background: #C4C4C4; }
+main section#seccion-01 article.ancho-25 { width: 25%; height: 500px; margin: 0; float: left; position: relative; }
+
+.gris-claro { background: #A7A6A6; }
+.gris-oscuro { background: #707070; }
+
+/*
+main section#seccion-01 article.ancho-25:nth-child(2) { background: #A7A6A6; }
+main section#seccion-01 article.ancho-25:nth-child(3) { background: #707070; }
+*/
+
+
+
+/* Sección 02 */
+main section#seccion-02 { width: 100%; height: 650px; margin: 0 auto; float: none; position: relative; }
+
+main section#seccion-02 article { width: 40%; height: 500px; margin: 0; float: left; position: relative; background: #fff; padding: 75px 5%; }
+main section#seccion-02 article h1 { font-size: 2.813em; line-height: 0.9em; color: #f50; font-weight: 900; padding: 0 0 40px; text-align: left; }
+main section#seccion-02 article p { font-size: 1em; line-height: 1.5em; color: #000; font-weight: 500; padding: 0 0 30px; text-align: justify; }
+main section#seccion-02 article p strong { font-weight: 900; }
+main section#seccion-02 article p em { font-weight: 900; font-style: italic; }
+main section#seccion-02 article p span { font-weight: 900; color: #f50; }
+
+main section#seccion-02 article p:nth-child(2)::first-letter { font-weight: bold; font-size: 1.563em; }
+
+main section#seccion-02 article p:nth-child(3) { padding: 0; }
+main section#seccion-02 article p:nth-child(3) span.punto-final { font-weight: bold; color: #1713EA; font-size: 1.563em; }
+
+main section#seccion-02 figure { width: 50%; height: 650px; margin: 0; float: left; position: relative; background: url('../img/img-fondo-01.jpg') no-repeat top center; background-size: cover; }
+
+
+
+
+
+/* Zona de Media Queries */
+
+/* Tablets */
+@media only screen and (max-width: 1199px){
+    main section#seccion-01 { height: auto; }
+    main section#seccion-01 article.ancho-50 { width: 100%; height: 300px; margin: 0 auto; float: none; }
+    main section#seccion-01 article.ancho-25 { width: 100%; height: 300px; margin: 0 auto; float: none; }
+
+
+    main section#seccion-02 { height: auto; }
+    main section#seccion-02 article { width: 80%; height: auto; margin: 0 auto; float: none; padding: 75px 0; }
+    main section#seccion-02 article h1 { font-size: 2.188em; text-align: center; }
+    main section#seccion-02 article p { text-align: center; }
+    main section#seccion-02 figure { width: 100%; height: 350px; margin: 0 auto; float: none; }
+}
+
+/* Móviles Grandes */
+@media only screen and (max-width: 499px){
+    
+}
+
+/* Móviles Pequeños */
+@media only screen and (max-width: 399px){
+    
+}
